@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>TEIN YAZILIM İNSAN KAYNAKLARI SİSTEMİ</title>
+    <link rel="stylesheet"
+          href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+          integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+          crossorigin="anonymous">
+</head>
+<body>
+<div class="container">
+    <h1>TEIN YAZILIM İNSAN KAYNAKLARI SİSTEMİ</h1>
+    <hr>
+    <h2>YENİ CV</h2>
+
+    <form action="#" th:action="@{/saveEmployee}" th:object="${employee}"
+          method="POST">
+        <input type="text" th:field="*{name}"
+               placeholder="Ad-Soyad Giriniz" class="form-control mb-4 col-4">
+
+        <input type="text" th:field="*{school}"
+               placeholder="Mezun olduğunuz okulu giriniz" class="form-control mb-4 col-4">
+
+        <input type="text" th:field="*{skills}"
+               placeholder="Yeteneklerinizi Giriniz" class="form-control mb-4 col-4">
+
+        <input type="text" th:field="*{hobby}"
+               placeholder="Hobilerinizi Giriniz" class="form-control mb-4 col-4">
+
+        <input type="text" th:field="*{experience}"
+               placeholder="Çalışma Deneyiminiz Giriniz" class="form-control mb-4 col-4">
+
+        <button type="submit" class="btn btn-info col-2">KAYDET</button>
+    </form>
+
+    <hr>
+
+    <a th:href = "@{/}"> LİSTEYE DÖN</a>
+</div>
+</body>
+</html>
